@@ -1,3 +1,6 @@
+import 'package:digicert/main.dart';
+import 'package:digicert/page/cek_certificate.dart';
+import 'package:digicert/page/profile.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -30,21 +33,21 @@ class CustomDrawer extends StatelessWidget {
             leading: const Icon(Icons.home),
             title: const Text('Home'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.check),
+            title: const Text('Cek Sertifikat'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => CekCertificatePage()));
             },
           ),
           ListTile(
             leading: const Icon(Icons.account_circle),
             title: const Text('Profile'),
             onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
-            onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
             },
           ),
           ListTile(
